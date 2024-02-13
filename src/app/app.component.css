@@ -1,0 +1,10 @@
+main{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: 10%;
+}
+*{
+    padding: 0;
+    margin: 0;
+}

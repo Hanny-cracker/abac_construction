@@ -1,0 +1,20 @@
+*{
+    background-color: black;
+    color: aliceblue;
+}
+.footer{
+    top: 100%;
+    overflow: hidden;
+    position: sticky;
+    text-align: center;
+    align-items: center;
+
+}
+a{
+    text-decoration: none;
+    padding: 0px 10px;
+    font-size: 20px;
+}
+i{
+    color: goldenrod;
+}

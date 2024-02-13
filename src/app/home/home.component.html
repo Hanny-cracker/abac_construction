@@ -1,0 +1,88 @@
+<div class="container">
+    <img src="assets/pictures/cover_pic.jpg" alt="Notebook" >
+    <div class="content">
+        <section class="abac">
+            <h1>ABAC</h1>
+            <h2 class="const">CONSTRUCTION</h2>
+            <h2 class="const">BUILDING SERVICE</h2>
+            <p>With over <b>25</b> years of <i>Expirence</i>. We bring out the best of the best </p>
+        </section>    </div>
+
+</div>
+<section class="about-us">
+
+    <div class="slogan">
+        <div class="heading">
+            <h6>ABOUT US</h6>
+        </div>
+        <h2> Making your vision come true at the basics.</h2>
+    </div>
+    <div class="text">
+        At ABAC CONSTRUCTION, design is more than a profession – it’s a
+        way of life. We approach each project as an opportunity to weave
+        narratives into built form, merging artistry with technical
+        expertise. Our design philosophy hinges on collaboration,
+        sustainability, and a profound understanding of the unique
+        aspirations of our clients. By combining innovative thinking
+        with timeless principles, we transform concepts into reality,
+        crafting environments that seamlessly blend beauty, functionality,
+        and purpose
+        <div class="abt">
+            <button class="btn1 abt-us">ABOUT US</button>
+            <button class="btn1 cont-us">CONTACT US</button>
+        </div>
+    </div>
+</section>
+<section class="landing-service">
+    <div class="landing">
+        <ul>
+            <li>
+                <div class="list1-pic">
+                    <img src="assets/service-pic/list1.png" width="40%" alt="General Construction picture">
+                </div>
+                <div class="list1text">
+                    <h1>General Construction</h1>
+                    <p> Service overview With experience contracting
+                    and professional industry latest generation technological.</p>
+                </div>
+            </li>
+            <li>
+                <div class="list2-pic pic">
+                    <img src="assets/service-pic/list2.png" width="40%" alt="Building Design picture">
+                </div>
+                <div class="list2text">
+                    <h1>Building Design</h1>
+                    <p>Service overview With experience contracting
+                    and professional industry latest generation technological.</p> 
+                </div>
+            </li>
+            <li>
+                <div class="list3-pic">
+                    <img src="assets/service-pic/list3.png" width="40%" alt="Project Management picture">
+                </div>
+                <div class="list3text">
+                    <h1>Project Management</h1>
+                    <p> Service overview With experience contracting
+                    and professional industry latest generation technological.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="picture">
+        <img src="assets/pictures/decking.jpg" width="100%" alt="">
+    </div>
+</section>
+<section class="main-service">
+    <div class="row">
+       <div class="col-lg-4" *ngFor="let item of service">
+        <div class="servicebox">
+            <img src="{{item.img}}" alt="">
+            <h1>{{item.title}}</h1>
+            <p>{{item.text}}</p>
+            <div class="btn-style"></div>
+            <button class="btn btn2">{{item.more}}</button>
+        </div>
+       </div> 
+    </div>
+    
+</section>
