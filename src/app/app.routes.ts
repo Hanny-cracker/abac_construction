@@ -3,6 +3,8 @@ import { HomeComponent } from './home/home.component';
 import {AboutUsComponent} from './pages/about-us/about-us.component';
 import { OurHistoryComponent } from './pages/our-history/our-history.component';
 import { TeamMembersComponent } from './pages/team-members/team-members.component';
+import { ContactComponent } from './contact/contact.component';
+
 
 export const routes: Routes = [
     {
@@ -34,5 +36,10 @@ export const routes: Routes = [
         path: 'history',
         component: OurHistoryComponent,
         title: 'About Us'
+      },
+      {
+        path: 'contact',
+        component: ContactComponent,
+        title: 'Contact Us'
       }
 ];
