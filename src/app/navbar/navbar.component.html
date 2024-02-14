@@ -7,17 +7,16 @@
         <li class="hideOnMobile"><a [routerLink]="['home']"><span>Home</span></a></li>
         <li class="hideOnMobile"><a [routerLink]="['/routePath']"><span>Services</span></a>
             <div class="dropdown-content">
-                <a [routerLink]="['/routePath']">Building Construction</a>
-                <a [routerLink]="['/routePath']">Innovation Planning</a>
-                <a [routerLink]="['/routePath']">Home Construction</a>
-                <a [routerLink]="['/routePath']">Property Maintenace</a>
-                <a [routerLink]="['/routePath']">Building Design </a>
+                <a [routerLink]="['services/building construction']">Building Construction</a>
+                <a [routerLink]="['services/construction']">Home Construction</a>
+                <a [routerLink]="['services/maintenance']">Property Maintenace</a>
+                <a [routerLink]="['services/design']">Building Design </a>
               </div></li>
         <li class="hideOnMobile"><a [routerLink]="['/routePath']"><span>Pages</span></a>
         <div class="dropdown-content">
-                    <a [routerLink]="['/about-us']">About Us</a>
-                    <a [routerLink]="['/history']">Our History</a>
-                    <a [routerLink]="['/team']">Team Members</a>
+                    <a [routerLink]="['pages/about-us']">About Us</a>
+                    <a [routerLink]="['pages/history']">Our History</a>
+                    <a [routerLink]="['pages/team']">Team Members</a>
                   </div></li>
         <li class="hideOnMobile"><a [routerLink]="['/routePath']"><span>Blog</span></a>
             <div class="dropdown-content">
