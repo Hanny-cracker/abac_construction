@@ -1,58 +1,123 @@
 * {
     box-sizing: border-box;
+    margin-left: none;
+    overflow: hidden;
 }
 
-section {
+/* section {
     margin: 1.5%;
-}
+} */
 
-.container img {
+.container .cover_pic {
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    height: 100vh;
     width: 100vw;
+    margin-left: -2%;
 }
 
 .container {
     position: relative;
     max-width: 100%;
+    border-radius: 0px 0px 10px 10px;
 
 }
 
 .container .content {
+    margin-left: -1%;
     position: absolute;
     bottom: 0;
-    background: rgb(0, 0, 0);
-    background: rgba(95, 93, 93, 0.562);
-    color: #f1f1f1;
+    /* background: rgb(0, 0, 0); */
+    background: rgba(0, 0, 0, 0.468);
     width: 100%;
     height: 100%;
 }
-
-.abac {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    width: 55%;
-    text-align: center;
+.const{
+    letter-spacing: 10px;
+    color: white;
+    margin-bottom: 0px;
 }
 
-.content h1 {
+.title_home {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    font-family: "Montserrat Medium";
+    max-width: 40ch;
+    text-align: center;
+    transform: scale(0.94);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  }
+  @keyframes scale {
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  span {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+  }
+  
+  span:nth-child(1) {
+    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  span:nth-child(2) {
+    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  span:nth-child(3) {
+    animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  span:nth-child(4) {
+    animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  span:nth-child(5) {
+    animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
+.abac {
+    position: relative;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: auto;
+    text-align: left;
+    color: #f1f1f1;
+    display: flex;
+}
+
+.abac h1 {
     font-weight: bold;
     font-size: 80px;
     color: goldenrod;
-}
-
-.const {
-    color: white;
-    margin-bottom: 0px;
 }
 
 .abac p {
     padding-top: 10px;
 }
 
+.about-us {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+    grid-template-rows: repeat(100%, 100px);
+    gap: 1rem;
+    margin-top: 6%;
+}
 
 .heading {
     text-decoration: underline 3px goldenrod;
@@ -60,14 +125,6 @@ section {
     padding: 10px;
     font-size: 20px;
     font-family: DM Sans 9pt;
-}
-
-.about-us {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
-    grid-template-rows: repeat(100%, 100px);
-    gap: 1rem;
-    margin-top: 6%;
 }
 
 .slogan {
@@ -109,108 +166,73 @@ section {
 .abt-us:hover {
     background-color: rgb(7, 7, 102);
     color: rgb(253, 212, 26);
+    transition: 0.5s;
 }
 
 /* pre services befor main services */
-.landing-service {
+
+.landing .row{
+    margin: 50px;
+    padding: 50px;
+    margin: auto;
     margin-top: 5%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
-    grid-template-rows: repeat(100%, 100px);
-    gap: 1rem;
+    
+    
+}
+.landing .first{
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.s_text{
+    padding: 70px;
+    background-color: rgba(0, 0, 0, 0.271);
+}
+.projects{
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+.main-service{
+    margin: 50px;
 }
 
-.landing ul {
-    border-radius: 10px;
-    background: linear-gradient(to bottom, #ececec 31%, #ffffff 100%);
-    padding: 10px;
-    list-style: none;
+.main-service .servicebox{
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    
 }
-
-.landing ul li:last-child {
-    border-bottom: 1px solid white;
+.details{
+    padding: 30px;
+    color: white;
+    background: linear-gradient(to right, #000000a7 30%, #ffffff00 60%);
 }
-
-.landing ul li {
-    padding-top: 5%;
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    border-bottom: 1px solid black;
+.hide{
+    display: none;
 }
-
-.picture img {
-    border-radius: 10px;
-}
-
-/* end */
-/* services section */
-
-.servicebox {
-    border-radius: 10px;
-    background: linear-gradient(to bottom, #ececec 31%, #ffffff 100%);
-    padding: 10px;
-    margin: 10px;
-}
-
-.servicebox img {
-    width: 30%;
-    object-fit: cover;
-}
-
-.btn2 {
-    border: 1px solid darkblue;
-}
-
-.servicebox:hover {
-    background: linear-gradient(to bottom, #ebe1ab 31%, #ffffff 100%);
-    transition: 0.7s;
-    border-top: 1px solid #5c8af0;
-    border-right: 1px solid #d9e6d9;
-    border-left: 1px solid #ffedc9;
-    border-bottom: 1px solid #8c9eab;
-    animation: circle .5s forwards;
-}
-
-@keyframes circle {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.btn2:hover {
-    color: #fffbfb;
-    background-color: rgba(24, 19, 75, 0.856);
-    transition: 0.3s;
-}
-
-.servicebox h1 {
-    /* font-size: 20px;  */
-    margin-top: 20px;
-    font-weight: bold;
+.details:hover .hide{
+    display: block;
+    transition: 0.8s;
 }
 
 /* end */
 @media (max-width : 800px) {
-    .container .content {
-        padding: 10vh 0px 0px 7vh;
+    .landing-service{
+        display: none;
     }
-
-    .container img {
-        height: 100vh;
+    .title_home {
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
     }
+    .abac{
+        flex-direction: column;
+        margin-left: 4%;
 
-    .container .content .const {
-        font-size: 20px;
-
-    }
-
-    .container .content h1 {
-        font-weight: bold;
-        font-size: 80px;
-        color: goldenrod;
     }
 }

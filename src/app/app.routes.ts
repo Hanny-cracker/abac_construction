@@ -1,7 +1,7 @@
 import { config } from './app.config.server';
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import {AboutUsComponent} from './pages/about-us/about-us.component';
+import { AboutUsComponent} from './pages/about-us/about-us.component';
 import { OurHistoryComponent } from './pages/our-history/our-history.component';
 import { TeamMembersComponent } from './pages/team-members/team-members.component';
 import { ContactComponent } from './contact/contact.component';
@@ -48,22 +48,22 @@ export const routes: Routes = [
         title: 'Contact Us'
       },
       {
-        path : 'services/building construction',
+        path : 'services/building-construction',
         component : BuildingConstructionComponent,
         title : 'Bulding Construction'
       },
       {
-        path : 'services/design',
+        path : 'services/building-design',
         component :  BuildingDesignComponent,
         title : 'Building Design'
       },
       {
-        path : 'services/construction',
+        path : 'services/software-Training',
         component : HomeConstructionComponent,
         title : 'Home Construction'
       },
       {
-        path : 'services/maintenance',
+        path : 'services/property-maintenance',
         component : PropertyMaintenanceComponent,
         title : 'Property Maintenace'
       }

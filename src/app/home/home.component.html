@@ -1,88 +1,93 @@
 <div class="container">
-    <img src="assets/pictures/cover_pic.jpg" alt="Notebook" >
+    <img class="cover_pic" src="assets/homepage_pic/cover_pic.jpg" alt="Notebook">
     <div class="content">
-        <section class="abac">
-            <h1>ABAC</h1>
+
+    </div>
+    <section class="abac">
+        <img src="assets/logo/logo1.1.png" width="30%" alt="">
+        <div class="leter_head">
+            <div class="title_home">
+                <span>
+                    <h1>A</h1>
+                </span>
+                <span>
+                    <h1>B</h1>
+                </span>
+                <span>
+                    <h1>A</h1>
+                </span>
+                <span>
+                    <h1>C</h1>
+                </span>
+            </div>
             <h2 class="const">CONSTRUCTION</h2>
             <h2 class="const">BUILDING SERVICE</h2>
-            <p>With over <b>25</b> years of <i>Expirence</i>. We bring out the best of the best </p>
-        </section>    </div>
-
+            <p>With over <b style="color: goldenrod;">25</b> years of <i>Expirence</i>. We bring out the best of the
+                best </p>
+        </div>
+    </section>
 </div>
-<section class="about-us">
+<div>
+    <section class="about-us">
 
-    <div class="slogan">
-        <div class="heading">
-            <h6>ABOUT US</h6>
+        <div class="slogan">
+            <div class="heading">
+                <h6>ABOUT US</h6>
+            </div>
+            <h2> Making your vision come true at the basics.</h2>
         </div>
-        <h2> Making your vision come true at the basics.</h2>
-    </div>
-    <div class="text">
-        At ABAC CONSTRUCTION, design is more than a profession – it’s a
-        way of life. We approach each project as an opportunity to weave
-        narratives into built form, merging artistry with technical
-        expertise. Our design philosophy hinges on collaboration,
-        sustainability, and a profound understanding of the unique
-        aspirations of our clients. By combining innovative thinking
-        with timeless principles, we transform concepts into reality,
-        crafting environments that seamlessly blend beauty, functionality,
-        and purpose
-        <div class="abt">
-            <button class="btn1 abt-us">ABOUT US</button>
-            <button class="btn1 cont-us">CONTACT US</button>
+        <div class="text">
+            At ABAC CONSTRUCTION, design is more than a profession – it’s a
+            way of life. We approach each project as an opportunity to weave
+            narratives into built form, merging artistry with technical
+            expertise. Our design philosophy hinges on collaboration,
+            sustainability, and a profound understanding of the unique
+            aspirations of our clients. By combining innovative thinking
+            with timeless principles, we transform concepts into reality,
+            crafting environments that seamlessly blend beauty, functionality,
+            and purpose
+            <div class="abt">
+                <button class="btn1 abt-us">ABOUT US</button>
+                <button class="btn1 cont-us">CONTACT US</button>
+            </div>
         </div>
-    </div>
-</section>
-<section class="landing-service">
+    </section>
+</div>
+<section class="">
     <div class="landing">
-        <ul>
-            <li>
-                <div class="list1-pic">
-                    <img src="assets/service-pic/list1.png" width="40%" alt="General Construction picture">
+        <div class="row">
+            <div class="col-lg-4" *ngFor="let item of special_service">
+                <div class="first" style="background-image: url({{item.img}});">
+                    <div class="s_text">
+                        <h1>{{item.title}}</h1>
+                        <p>{{item.text}}</p>
+                        <!-- <div class="btn-style"></div> -->
+                        <button class="btn abt-us">{{item.more}}</button>
+                    </div>
                 </div>
-                <div class="list1text">
-                    <h1>General Construction</h1>
-                    <p> Service overview With experience contracting
-                    and professional industry latest generation technological.</p>
-                </div>
-            </li>
-            <li>
-                <div class="list2-pic pic">
-                    <img src="assets/service-pic/list2.png" width="40%" alt="Building Design picture">
-                </div>
-                <div class="list2text">
-                    <h1>Building Design</h1>
-                    <p>Service overview With experience contracting
-                    and professional industry latest generation technological.</p> 
-                </div>
-            </li>
-            <li>
-                <div class="list3-pic">
-                    <img src="assets/service-pic/list3.png" width="40%" alt="Project Management picture">
-                </div>
-                <div class="list3text">
-                    <h1>Project Management</h1>
-                    <p> Service overview With experience contracting
-                    and professional industry latest generation technological.</p>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <div class="picture">
-        <img src="assets/pictures/decking.jpg" width="100%" alt="">
+            </div>
+        </div>
     </div>
 </section>
+
 <section class="main-service">
-    <div class="row">
-       <div class="col-lg-4" *ngFor="let item of service">
-        <div class="servicebox">
-            <img src="{{item.img}}" alt="">
-            <h1>{{item.title}}</h1>
-            <p>{{item.text}}</p>
-            <div class="btn-style"></div>
-            <button class="btn btn2">{{item.more}}</button>
-        </div>
-       </div> 
+    <div class="heading">
+        <h6>OUR SERVICES</h6>
     </div>
-    
+    <div class="projects">
+        <h1>Our Special Projects</h1>
+    </div>
+    <div class="service-row">
+        <div *ngFor="let item of special_service">
+            <div class="servicebox" style="background-image: url({{item.img}});">
+                <div class="details">
+                    <h1>{{item.title}}</h1>
+                    <p class="hide">{{item.text}}</p>
+                    <div class="btn-style hide"></div>
+                    <button class="btn abt-us hide">{{item.more}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>

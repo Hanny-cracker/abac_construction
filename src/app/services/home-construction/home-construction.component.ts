@@ -9,5 +9,5 @@ import { RouterModule } from '@angular/router';
   styleUrl: './home-construction.component.css'
 })
 export class HomeConstructionComponent {
-  title = "Home Construction"
+  title = "Software Training"
 }
