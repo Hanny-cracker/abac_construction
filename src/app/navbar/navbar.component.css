@@ -9,7 +9,7 @@
 }
 
 
-.logo:hover{
+.logo:hover {
     animation: circle .5s forwards;
     transition: 0.7s;
 }
@@ -19,7 +19,7 @@ nav {
     display: flex;
 }
 
-nav ul {
+nav .desktop ul {
     box-shadow: 0px 1px 10px;
     border-radius: 50px;
     background-color: rgba(255, 255, 255, 0.148);
@@ -34,7 +34,7 @@ nav ul {
     width: 70%;
 }
 
-nav li {
+nav .desktop li {
     margin: auto;
     height: 40px;
 }
@@ -89,7 +89,7 @@ nav a:hover {
     content: '\00bb';
     position: absolute;
     opacity: 0;
-    top:30%;
+    top: 30%;
     margin-right: 5%;
     transition: 0.5s;
     color: black;
@@ -108,90 +108,132 @@ nav a:hover {
 
 /* navbar dropedown */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.181);
-  backdrop-filter: blur(5px);
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  border-radius: 10px;
-  align-items: center;
-  margin: auto;
-  padding: 10px;
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.66);
+    backdrop-filter: blur(5px);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    align-items: center;
+    margin: auto;
+    padding: 10px;
 }
-.button .dropdown-content{
+
+.button .dropdown-content {
     width: 100%;
 }
 
 .dropdown-content a {
-  float: none;
-  color: rgb(0, 0, 0);
-  padding: 7px 10px 10px 10px ;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  height: 40px;
-}
-.button .dropdown-content a{
-    color: #030303;
-    background-color: #f0f0f0;
+    float: none;
+    color: rgb(0, 0, 0);
+    padding: 7px 10px 10px 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
-.hideOnMobile .dropdown-content a:hover{
+.hideOnMobile .dropdown-content a:hover {
     background-color: rgb(243, 205, 37);
     border-radius: 50px;
     text-decoration: underline;
     transition: 0.5s;
-  }
+}
 
 .button .dropdown-content a:hover {
-  background-color: rgb(255, 255, 255);
-  text-decoration: underline;
-  transition: 0.5s;
+    background-color: rgb(255, 255, 255);
+    text-decoration: underline;
+    transition: 0.5s;
 }
 
-.hideOnMobile:hover .dropdown-content, .button:hover .dropdown-content {
-  display: block;
+.hideOnMobile:hover .dropdown-content,
+.button:hover .dropdown-content {
+    display: block;
 }
 
-ul .menu-button {
+.menu-button a {
     display: none;
+}
+
+nav .sidebar {
+    list-style: none;
+    text-align: center;
+    font-size: 25px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 0px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.692);
+    backdrop-filter: blur(5px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: 0.6s;
+}
+
+.sidebar li {
+    width: 100%;
+
+}
+
+.sidebar a {
+    width: 100%;
 }
 
 /* navbar end */
 
 
-@keyframes circle{
-    from{
+@keyframes circle {
+    from {
         transform: rotate(0deg);
     }
-    to{
+
+    to {
         transform: rotate(360deg);
     }
 }
 
 @media (max-width : 800px) {
-    /* .navbar{
-        margin-top: -10%;
-    } */
-    
-    nav ul{
-        display: none;
-    }
-  /*   nav .desktop{
-        width: 15%;
-    }
-    ul .menu-button {
-        display: block;
-        margin-left: 0;
-        font-size: 40px;
+    .navbar {
+        margin-top: -50px;
     }
 
-    ul .menu-button:hover {
+    nav .desktop ul {
+        display: none;
+    }
+
+    nav ul li {
+        padding: 20px;
+
+    }
+
+    nav .sidebar li:hover {
+        background-color: rgb(243, 205, 37);
+        border-radius: 20px;
+        transition: 0.5s;
+    }
+
+    nav li {
+        margin-bottom: 20px;
+    }
+
+    nav .menu-button a {
+        color: rgba(255, 223, 80, 0.815);
+        ;
+        /* margin-left: 1%; */
+        display: block;
+        margin-top: -10%;
+        font-size: 45px;
+    }
+
+    nav .menu-button a:hover {
         background-color: rgba(255, 223, 80, 0.815);
         color: #ffffff;
         transition: 0.5s;
         border-radius: 20px;
-    } */
+    }
 }

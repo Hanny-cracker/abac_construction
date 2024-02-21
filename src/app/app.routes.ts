@@ -9,6 +9,7 @@ import { BuildingConstructionComponent } from './services/building-construction/
 import { BuildingDesignComponent } from './services/building-design/building-design.component';
 import { PropertyMaintenanceComponent } from './services/property-maintenance/property-maintenance.component';
 import { HomeConstructionComponent } from './services/home-construction/home-construction.component';
+import { DetailsComponent } from './details/details.component';
 
 
 export const routes: Routes = [
@@ -44,8 +45,7 @@ export const routes: Routes = [
       },
       {
         path: 'contact',
-        component: ContactComponent,
-        title: 'Contact Us'
+        loadComponent : () => import('./contact/contact.component').then(m => m.ContactComponent)
       },
       {
         path : 'services/building-construction',
@@ -66,5 +66,10 @@ export const routes: Routes = [
         path : 'services/property-maintenance',
         component : PropertyMaintenanceComponent,
         title : 'Property Maintenace'
+      },
+      {
+        path: 'details/:id',
+        component: DetailsComponent,
+        title: 'Home details'
       }
 ];

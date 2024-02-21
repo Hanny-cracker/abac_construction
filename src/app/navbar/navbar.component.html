@@ -3,7 +3,45 @@
         <a [routerLink]="['home']">
         <img src="assets/logo/logo1.png" width="70px" alt="abac logo">
     </a></div>
-    <ul class="desktop">
+
+    
+    <ul class="sidebar" [style]="navStyle">
+        <div class="slide" [style]="slideStyle">
+        <li class="menu-btn" (click)="hideSidebar()">
+            <a>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24"
+                    viewBox="0 -960 960 960" width="24">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+            </a> 
+        </li>
+        <li><a href="">HOME</a></li>
+        <li class="button"> <a ><span>SERVICE</span></a>
+            <div class="dropdown-content">
+                <a href="services/building-construction">Building Construction</a>
+                <a href="services/software-Training">Software Training</a>
+                <a href="services/property-maintenance">Property Maintenace</a>
+                <a href="services/building-design">Building Design </a>
+                <!-- <a href="#">BUINDING DESIGN </a> -->
+              </div></li>
+        <li class="button"> <a ><span>PAGES</span></a>
+            <div class="dropdown-content">
+                <a href="pages/about-us">About Us</a>
+                <a href="pages/history">Our History</a>
+                <a href="pages/team">Team Members</a>
+              </div></li>
+        <li class="button"> <a href="#"><span>PROJECTS</span></a>
+            <div class="dropdown-content">
+                <a href="#">LATEST PROJECT</a>
+                <a href="#">PROJECT SINGLE</a>
+              </div></li>
+        <li><a href="">BLOG</a></li>
+        <li><a href="/contact">CONTACT</a></li>
+    </div>
+    </ul>
+
+    <div class="desktop">
+    <ul >
         <li class="hideOnMobile"><a [routerLink]="['home']"><span>Home</span></a></li>
         <li class="hideOnMobile"><a [routerLink]="['/routePath']"><span>Services</span></a>
             <div class="dropdown-content">
@@ -24,9 +62,13 @@
                 <a [routerLink]="['/routePath']">Poject Single</a>
               </div></li>
         <li class="hideOnMobile"><a [routerLink]="['/contact']"><span>Contact</span></a></li>
-        <li class="qoute hideOnMobile"><a [routerLink]="['/routePath']"><span>Get a Qoute</span></a></li>
-       <!-- <a class="menu-button" (click)="showSidebar()">
+        <li class="qoute hideOnMobile"><a [routerLink]="['/routePath']"><span>Request A Service</span></a></li>
+      
+    </ul>  
+   
+</div>
+<div class="menu-button">
+<a (click)="showSidebar()">
             &#9776;
-    </a> -->
-    </ul>     
+    </a>    </div> 
 </nav>

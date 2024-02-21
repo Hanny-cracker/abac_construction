@@ -15,18 +15,18 @@ export class NavbarComponent {
   slideStyle = '';
   showSidebar() {
    if(this.getScreenWidth <400){
-     this.navStyle = 'display : block;width:100%';
+     this.navStyle = 'width:100%';
      this.slideStyle = 'display : block';
    }else{
-     this.navStyle = 'display : block; width:250px';
+     this.navStyle = ' width:250px';
    this.slideStyle = 'display : block';
  }
    
    
  }
  hideSidebar(){
-   this.slideStyle = 'display : none'
-   this.navStyle = 'width:0px';
+  //  this.slideStyle = 'display : none'
+   this.navStyle = 'width:0%;'; 
  }
 
  @HostListener('window:resize', ['$event'])
@@ -34,7 +34,6 @@ export class NavbarComponent {
    this.getScreenWidth = window.innerWidth;
    if(this.getScreenWidth > 800 ){
        this.navStyle = 'none';
-       console.log(this.navStyle)
      }
  }
 }
