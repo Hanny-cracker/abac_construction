@@ -1,9 +1,16 @@
+* {
+    box-sizing: border-box;
+    margin-left: none;
+    overflow: hidden;
+}
+
 .container img {
     background-repeat: no-repeat;
     background-size: cover;
-    height: 30vh;
+    height: 40vh;
     width: 100%;
     border-radius: 0px 0px 10px 10px;
+    margin-left: -1%;
 }
 
 .title h1{
@@ -17,7 +24,8 @@
 
 }
 
-.container .content { 
+.container .content {
+    margin-left: -1%; 
     border-radius: 0px 0px 10px 10px;
     position: absolute;
     bottom: 0;
@@ -25,7 +33,7 @@
     background: rgba(71, 71, 71, 0.466);
     color: #f1f1f1;
     width: 100%;
-    height: 30vh;
+    height: 100%;
     padding: 15vh 15vh 15vh 15%;
 }
 
@@ -52,27 +60,50 @@
     text-decoration: none;
 }
 
+input .ng-invalid{
+border: 1px solid red;
+}
 
 .contacts{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(17rem, 100%), 1fr));
     grid-template-rows: repeat(100%, 100px);
-    gap: 1rem;
+    gap: 1px;
     margin-top: 6%;
     margin-bottom: 10%;
+    width: 80%;   
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.address{
+    border-left: 5px solid goldenrod;
+    padding: 10px;
+    margin-left: 10%;
+    box-shadow: 0px 0px 6px rgb(223, 223, 223);
+}
+
+.address p{
+    font-size: 25px;
 }
 
 .servicebox{
-    text-align: center;
+    display: flex;
+    margin-top: 50px;
+
 }
+.servicebox a{
+
+    text-decoration: none;
+    color: goldenrod;
+}
+/* 
+
 
 .servicebox img{
     color: goldenrod;
 }
-.servicebox a{
-    text-decoration: none;
-    color: black;
-}
+
 
 .servicebox {
     border-radius: 10px;
@@ -87,9 +118,83 @@
 
 
 .servicebox h1 {
-    /* font-size: 20px;  */
+    font-size: 20px; 
     margin-top: 20px;
     font-weight: bold;
+} */
+
+.contact-us{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+.form-control{
+    border: none;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 0px 0px 6px rgb(223, 223, 223);
 }
 
+.column {
+    float: left;
+    width: 50%; 
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .send {
+    background-color: rgb(253, 212, 26);
+    color: black;
+    border: none;
+}
+
+.send:hover {
+    background-color: rgb(7, 7, 102);
+    color: rgb(253, 212, 26);
+    transition: 0.5s;
+}
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .column {
+      width: 100%;
+    }
+    .contact-us{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+
+/* 
+.listing-apply .section-heading {
+    font-size: 18pt;
+    margin-bottom: 15px;
+  }
+  
+  label, input {
+    display: block;
+  }
+  label {
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12pt;
+  }
+  input {
+    font-size: 16pt;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 400px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: solid .3px;
+  } */
 

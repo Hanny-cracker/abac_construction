@@ -3,7 +3,7 @@
     <div class="content">
         <div class="title">
             <h1>Contact Us</h1>
-            <div class="text"> 
+            <div class="text">
                 <div class="hme">
                     <h6><a [routerLink]="['home']"><i class="bi bi-house-door"></i>Home</a> / </h6>
                 </div>
@@ -14,41 +14,70 @@
         </div>
     </div>
 </div>
-  
+
+
+
+
+<section class="contact-us">
+    <form [formGroup]="applyForm" (ngSubmit)="submitApplication()" novalidate>
+        <div class="row">
+            <div class="column">
+                <input class="form-control" id="full-name" type="text" placeholder="Your Full Name"
+                    formControlName="fullName" required >
+                <input class="form-control" id="address-name" type="text" placeholder="Your Address"
+                    formControlName="address">
+            </div>
+            <div class="column">
+                <input class="form-control" id="email" type="email" placeholder="Your Email Address"
+                    formControlName="email" required>
+
+                <input class="form-control" type="text" id="number" placeholder="Your Phone Number"
+                    formControlName="phone_number" required >
+            </div>
+        </div>
+        <textarea placeholder="Give Us More Details" class="form-control" name="" id="textArea" cols="30"
+            rows="5" formControlName="text" required=""></textarea>
+        <button type="submit" class="btn send form-control" [disabled]="applyForm.invalid">Submit Message</button>
+    </form> 
+</section>
 
 <div class="contacts">
-<section class="main-service">
-    <div class="row">
-       <div class="col-lg-15">
-        <div class="servicebox">
-            <img src="assets/service-pic/location.png" width="15%" alt="Address photo">
-            <h1>Address</h1>
-            <p>Cheif Street BOMAKA</p>
+    <section class="main-service">
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="address ">
+                    <img src="assets/service-pic/location.png" width="15%" alt="Address photo">
+                    <h4>Address</h4>
+                    <p>Cheif Street BOMAKA</p>
+                </div>
+            </div>
         </div>
-       </div> 
-    </div>    
-</section>
-<section class="main-service">
-    <div class="row">
-       <div class="col-lg-15">
-        <div class="servicebox">
-            <img src="assets/service-pic/icons8-email-100.png" width="30%" alt="email photo">
-            <h1>Email Address</h1>
-            <p><a href="mailto:etsabac996@gmail.com">{{email}}</a></p>
+    </section>
+    <section class="main-service">
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="servicebox">
+                    <img src="assets/service-pic/icons8-email-100.png" width="30%" alt="email photo">
+                    <div>
+                        <h5>Email Address</h5>
+                        <p><a href="mailto:abac@abacconstruction.com">{{email}}</a></p>
+                    </div>
+                </div>
+            </div>
         </div>
-       </div> 
-    </div>    
-</section>
+    </section>
 
-<section class="main-service">
-    <div class="row">
-       <div class="col-lg-15">
-        <div class="servicebox">
-            <img src="assets/service-pic/icons8-phone-call-64.png" width="25%" alt="call photo">
-            <h1>Phone Number</h1>
-            <p><a href="tel:+237677712186">+237 677712186</a></p>
+    <section class="main-service">
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="servicebox">
+                    <img src="assets/service-pic/icons8-phone-call-64.png" width="25%" alt="call photo">
+                    <div>
+                        <h5>Phone Number</h5>
+                        <p><a href="tel:+237677712186">+237 677712186</a></p>
+                    </div>
+                </div>
+            </div>
         </div>
-       </div> 
-    </div>    
-</section>
+    </section>
 </div>
